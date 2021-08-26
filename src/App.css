@@ -197,7 +197,7 @@ input:checked + .slider:before {
   transition: all .2s;
   border-radius: 5px;
   height: 180px;
-  width: 28rem;
+  /* width: 28rem; */
   margin: 20px;
   position: relative;
   /* background-color: #fff;  */
