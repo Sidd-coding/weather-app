@@ -1,7 +1,7 @@
 .App-black {
  background-color: #6b6b6b;
  color: #f1f1f1;
- height: 215vh;
+ height: 235vh;
 }
 
 .header{
@@ -57,7 +57,7 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 25px;
+  height: 26px;
   width: 50px;
   left: 1px;
   bottom: 1.5px;
