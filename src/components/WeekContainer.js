@@ -45,7 +45,9 @@ const WeekContainer = (props) => {
                                                 <ion-icon name="cloudy-outline"></ion-icon> :
                                                 el.weather[0].description === "broken clouds" ?
                                                     <ion-icon name="cloud-outline"></ion-icon> :
-                                                    "No Icon"
+                                                    el.weather[0].description === "few clouds" ?
+                                                        <ion-icon name="partly-sunny-outline"></ion-icon> :
+                                                        "No Icon"
                             }
                         </span>
                         <span className="card-degree">{Math.round(el.main.temp)} °C </span>
