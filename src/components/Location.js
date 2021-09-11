@@ -3,7 +3,7 @@ import { BiMapPin } from "react-icons/bi";
 
 const Location = () => {
     return (
-        <div className="">
+        <div>
             <h1 className="text-center hold">
                 <span aria-label="Lucknow" title="Luckow">
                     <BiMapPin />

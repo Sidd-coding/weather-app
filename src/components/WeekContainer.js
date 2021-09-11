@@ -28,25 +28,29 @@ const WeekContainer = (props) => {
     return (
         <div className="container">
             {props.fiveDay?.list?.length > 0 ? <div>{weather.map((el, index) => (
-                <div className="card-body text-center" key={index}>
-                    <span className="card-date"> {dayName[new Date(el.dt * 1000).getDay()]} </span>
+                <div className="text-center" key={index}>
+                    <div className={props.checked ? "body-dark" : "card-body"}>
+                        <span className="card-date"> {dayName[new Date(el.dt * 1000).getDay()]} </span>
 
-                    <span className="card-weather-emoji" role="img" aria-label="broken clouds" title="broken clouds">
-                        {
-                            el.weather[0].description === "moderate rain" ?
-                                <ion-icon name="rainy-outline"></ion-icon> :
-                                el.weather[0].description === "light rain" ?
-                                    <ion-icon name="thunderstorm-outline"></ion-icon> :
-                                    el.weather[0].description === "overcast clouds" ?
-                                        <ion-icon name="cloudy-outline"></ion-icon> :
-                                        el.weather[0].description === "broken clouds" ?
-                                            <ion-icon name="cloud-outline"></ion-icon> :
-                                            "No Icon"
-                        }
-                    </span>
-                    <span className="card-degree">{Math.round(el.main.temp)} °C </span>
+
+                        <span className="card-weather-emoji" role="img" aria-label="broken clouds" title="broken clouds">
+                            {
+                                el.weather[0].description === "scattered clouds" ?
+                                    <ion-icon name="partly-sunny-outline"></ion-icon> :
+                                    el.weather[0].description === "moderate rain" ?
+                                        <ion-icon name="rainy-outline"></ion-icon> :
+                                        el.weather[0].description === "light rain" ?
+                                            <ion-icon name="thunderstorm-outline"></ion-icon> :
+                                            el.weather[0].description === "overcast clouds" ?
+                                                <ion-icon name="cloudy-outline"></ion-icon> :
+                                                el.weather[0].description === "broken clouds" ?
+                                                    <ion-icon name="cloud-outline"></ion-icon> :
+                                                    "No Icon"
+                            }
+                        </span>
+                        <span className="card-degree">{Math.round(el.main.temp)} °C </span>
+                    </div>
                 </div>
-
             ))}</div>
                 : <Button Main={props.fiveDayhandler} checked={props.checked} />
             }

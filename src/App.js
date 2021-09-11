@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import Header from "./components/Header";
 import Mui from "./components/Mui";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Weathercard from "./components/Weathercard";
 // import Button from "./components/Button";
 import WeekContainer from "./components/WeekContainer";
@@ -12,8 +12,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      weather: [],    // using for API 
-      fiveDay: [],    // Using for API
+      weather: [],
+      fiveDay: [],
       checked: false,
 
     };
@@ -36,25 +36,12 @@ class App extends React.Component {
     this.getWeather()
   }
 
-  // getMain = () => {
-  //   const day = this.state.weather
-  //   this.setState({
-  //     weather: day,
 
-  //   })
-  // }
   muiColorHandler = () => {
-    console.log("test");
-    // const muiHandler = this.state.allrockets.filter(mui => mui.success_rate_pct === 100)
-    // const muiHandler = this.setState({ backgroundcolor: 'black' });
     this.setState({
-      //  rockets: this.state.checked ? this.state.allrockets : muiHandler,
-      //style: this.state.checked ? this.state.unchecked : muiHandler,
       checked: !this.state.checked,
     })
   }
-
-
 
   render() {
     console.log(this.state);

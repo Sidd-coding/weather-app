@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <div className="header">
                 <div className="progress-container">
-                    <div className="progress-bar">
+                    <div className={props.checked ? "progress-bar" : "progressive-bar"}>
 
                     </div>
                 </div>
