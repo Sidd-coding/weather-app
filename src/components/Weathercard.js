@@ -18,7 +18,9 @@ const Weathercard = (props) => {
                                     <ion-icon name="rainy-outline"></ion-icon> :
                                     props.season.weather[0]?.description === "mist" ?
                                         <ion-icon name="cloud-outline"></ion-icon> :
-                                        "no icon"
+                                        props.season.weather[0]?.description === "overcast clouds" ?
+                                            <ion-icon name="partly-sunny-outline"></ion-icon> :
+                                            "no icon"
                     }
                 </span>
 
